@@ -1,3 +1,4 @@
+import Contato from "./components/Contato"
 import Header from "./components/Header"
 import Infos from "./components/Infos"
 import NavBar from "./components/NavBar"
@@ -13,6 +14,10 @@ function App() {
       <Infos/>
       <Ofertas/>
       <Sobre/>
+      <Contato/>
+      <footer> 
+        <small> @ 2024 | Desenvolvido por Luis Gustavo Braga </small>
+      </footer>
     </>
   )
 }
