@@ -36,8 +36,8 @@ export default function NavBar() {
                 <li><Link to="#"> Home </Link ></li>
                 <li><Link to="#infos"> Infos </Link></li>
                 <li><Link to="#ofertas"> Ofertas </Link></li>
-                <li><Link to="#"> Sobre </Link></li>
-                <li><Link to="#"> Contato </Link></li>
+                <li><Link to="#sobre"> Sobre </Link></li>
+                <li><Link to="#contato"> Contato </Link></li>
             </ul>
 
         </nav>
