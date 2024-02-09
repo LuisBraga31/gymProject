@@ -1,3 +1,5 @@
+@use '../mixins'
+
 .nav
     display: flex
     justify-content: space-around
@@ -10,21 +12,41 @@
     background-color: transparent
     transition: 0.6s ease-in-out
     color: #fff
+    @include mixins.screen1100
+        justify-content: space-between
+        height: 4.0625rem
+        padding: 0px 30px 
 
     .logo
         img
             width: 120px
+            @include mixins.screen1100
+                width: 70px
 
     .menu-btn
         display: none
     
     .menu-icon
         display: none
+        @include mixins.screen1100
+            display: block
 
     ul
         display: flex
+        @include mixins.screen1100
+            display: none
+            position: absolute
+            top: 65px
+            left: 0px
+            background-color: #000
+            border-bottom: 4px solid #ff1414
+            width: 100%
+            padding: 0
+            margin: 0
 
         li
+            @include mixins.screen1100
+                width: 100%
 
             a
                 color: #fff
@@ -38,13 +60,74 @@
                 letter-spacing: 1px
                 border-radius: 3px
                 transition: 0.2s ease-in-out
+                @include mixins.screen1100
+                    width: 100%
+                    height: 40px
+                    justify-content: center
+                    align-items: center
+                    margin: 0
+                    padding: 25px
+                    border: 1px splod rgba(38, 38, 38, 0.03)
 
                 &:hover
                     background-color: #ff1414
                     box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336)
                     transition: all ease 0.2s
 
+    .menu-btn:checked 
+        ~ .menu-icon 
+        .nav-icon
+            background: transparent
+        .nav-icon:before
+            transform: rotate(-45deg)
+            top: 0
+        .nav-icon:after
+            transform: rotate(45deg)
+            top: 0
+    
+    .menu-btn
+        display: none
+    
+        
 
+    .menu-icon
+        @include mixins.screen1100
+            cursor: pointer
+            float: right
+            padding: 28px 20px
+            position: relative
+            user-select: none
+
+
+        .nav-icon
+            @include mixins.screen1100
+                background-color: #fff
+                display: block
+                height: 2px
+                position: relative
+                transition: background 0.2s ease-out
+                width: 24px
+
+                &::before
+                    background: rgb(255,255,255)
+                    content: ''
+                    display: block
+                    height: 100%
+                    position: absolute
+                    transition: all ease-out 0.2s
+                    width: 100%
+                    top: 6px
+                
+                &::after
+                    background: rgb(255,255,255)
+                    content: ''
+                    display: block
+                    height: 100%
+                    position: absolute
+                    transition: all ease-out 0.2s
+                    width: 100%
+                    top: -6px
+                    
 .active
     box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.157)
     background-color: #000

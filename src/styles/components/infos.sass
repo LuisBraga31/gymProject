@@ -1,3 +1,5 @@
+@use '../mixins'
+
 #infos
     width: 100%
     display: flex
@@ -5,6 +7,10 @@
     align-items: center
     justify-content: center
     margin: 50px 0px
+    @include mixins.screen1190
+        height: auto
+    @include mixins.screen970
+        margin-bottom: 100px
 
     h1
         color: #fff
@@ -14,6 +20,8 @@
         display: flex
         justify-content: center
         align-content: center
+        @include mixins.screen1190
+            flex-wrap: wrap
 
         .a-box
             width: 250px
@@ -23,6 +31,12 @@
             overflow: hidden
             transition: 0.4s ease-in-out
             position: relative
+            @include mixins.screen400
+                width: 100%
+                height: 400px
+            @include mixins.screen1190
+                flex-grow: 1
+            
             
             &:hover
                 border: 1px solid #FF1414
@@ -37,6 +51,8 @@
                     margin-top: 40px
                     width: 100%
                     height: 50%
+                    @include mixins.screen1190
+                        object-fit: contain
 
             .a-b-text
                 width: 100%
