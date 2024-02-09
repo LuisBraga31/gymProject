@@ -34,8 +34,8 @@ export default function NavBar() {
 
             <ul className="menu">
                 <li><Link to="#"> Home </Link ></li>
-                <li><Link to="#"> Infos </Link></li>
-                <li><Link to="#"> Ofertas </Link></li>
+                <li><Link to="#infos"> Infos </Link></li>
+                <li><Link to="#ofertas"> Ofertas </Link></li>
                 <li><Link to="#"> Sobre </Link></li>
                 <li><Link to="#"> Contato </Link></li>
             </ul>
